@@ -21,25 +21,48 @@ v_2017.equals(v_2018)
 v_2018.equals(v_2019)
 
 #Cantidad de elementos en cada data frame 
-print("2014 : ",v_2014.count())
+'''print("2014 : ",v_2014.count())
 print("2015 : ",v_2015.count())
 print("2016 : ",v_2016.count())
 print("2017 : ",v_2017.count())
 print("2018 : ",v_2018.count())
-print("2019 : ",v_2019.count())
+print("2019 : ",v_2019.count())'''
+
 
 #Se convierte cada data frame para operaciones de conjuntos 
 set_2014 = set(v_2014)
+'''for i in v_2014:
+    if i in set_2014:
+      print(f"Yes,{i}  is in this set")
+    else:
+        print(f"No,{i} is not in thi set")'''
 set_2015 = set(v_2015)
 set_2016 = set(v_2016)
 set_2017 = set(v_2017)
 set_2018 = set(v_2018)
 set_2019 = set(v_2019)
 
-for a in range(6):
-    
-print('Numero de elementos : ', len(set_2014))
 
+  
+#print('Numero de elementos : ', len(set_2014))
 #Comparación entre años 
 Intersección_2014_2015 = set_2014.intersection(set_2015)
-print(Intersección_2014_2015)
+#print(Intersección_2014_2015)
+for i in Intersección_2014_2015:
+    if i in set_2014:
+      print(f"Yes,{i}  is in this set")
+    else:
+        print(f"No,{i} is not in thi set")
+
+'''Intersección_2014_2015_2016 = Intersección_2014_2015.intersection(set_2016)
+print(len(Intersección_2014_2015_2016))
+Intersección_2014_2015_2016_2017 = Intersección_2014_2015_2016.intersection(set_2017)
+print(len(Intersección_2014_2015_2016_2017))
+Intersección_2014_2015_2016_2017_2018 = Intersección_2014_2015_2016_2017.intersection(set_2018)
+print(len(Intersección_2014_2015_2016_2017_2018))
+Intersección_2014_2015_2016_2017_2018_2019 = Intersección_2014_2015_2016_2017_2018.intersection(set_2019)
+#print(Intersección_2014_2015_2016_2017_2018_2019)
+
+#for a in Intersección_2014_2015_2016_2017_2018_2019:
+    #print(a)
+'''  
