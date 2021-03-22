@@ -1,0 +1,45 @@
+import pandas as pd
+import numpy as np 
+
+df = pd.read_csv('Análisis de Diccionario Conglomerado CSV.csv', delimiter = ";",encoding = 'latin1', error_bad_lines=False)
+#df.fillna(0, inplace=True) #Se llena los missing values con 0 
+df
+
+#Separación por años 
+v_2014 =df["2014"]
+v_2015 = df["2015"]
+v_2016 = df["2016"]
+v_2017 = df["2017"]
+v_2018 = df["2018"]
+v_2019 = df["2019"]
+
+#Comparación de años con pd.equal
+v_2014.equals(v_2015)
+v_2015.equals(v_2016)
+v_2016.equals(v_2017)
+v_2017.equals(v_2018)
+v_2018.equals(v_2019)
+
+#Cantidad de elementos en cada data frame 
+print("2014 : ",v_2014.count())
+print("2015 : ",v_2015.count())
+print("2016 : ",v_2016.count())
+print("2017 : ",v_2017.count())
+print("2018 : ",v_2018.count())
+print("2019 : ",v_2019.count())
+
+#Se convierte cada data frame para operaciones de conjuntos 
+set_2014 = set(v_2014)
+set_2015 = set(v_2015)
+set_2016 = set(v_2016)
+set_2017 = set(v_2017)
+set_2018 = set(v_2018)
+set_2019 = set(v_2019)
+
+for a in range(6):
+    
+print('Numero de elementos : ', len(set_2014))
+
+#Comparación entre años 
+Intersección_2014_2015 = set_2014.intersection(set_2015)
+print(Intersección_2014_2015)
